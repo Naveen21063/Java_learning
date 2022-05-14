@@ -1,0 +1,130 @@
+public P_14_exception
+{
+public static void main( string []args)
+{
+Exception_p_14 obj = new Exception_p_14();
+obj.
+}
+}
+
+class Exception_p_14
+{
+void basicException()
+{
+int b=0;
+int a=100/b;
+system.out.println(a);
+}
+
+void handleException()
+{
+try{	//sensitive code
+int b=0;
+int a=100/b;
+system.out.println(a);
+}
+
+catch(AirtmeticException e){
+system.out.println(e.getMessage());
+}
+System.out.println("rest of code!!");
+}
+
+void multipleException()
+{
+try{
+int b=0;
+int a=100/b;
+System.out.println(a);
+}
+
+catch(AirthmeticException e)
+{
+System.out.println(e.getMessage());
+}
+
+catch(Exception e)
+{
+System.out.println(e.getMessage());
+}
+}
+
+void inputMismatchException()
+{
+try{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the name");
+int num=sc.nextInt();
+System.out.println("you entered "+num);
+}
+
+catch(InputMismatchException e)
+{
+System.out.println("Input mismatch occurs!!!!");
+}
+}
+
+void statckOverflowException(int i)
+{
+try{
+while(i<0)
+{
+i++;
+}
+}
+
+catch(StackOverflowException e)
+{
+System.out.println(e.getMessage());
+}
+}
+
+void indexOutOfBoundException()
+{
+try{
+int arr[] = {1,2,3};
+System.out.println(arr[10]);
+}
+
+}
+
+void nullPointerException(){
+try{
+String s= null;
+System.out.println(s.length());
+}
+}
+
+void useOfThrow(int age) throws Exception,AirthmeticException,IOException{
+if(age<18)
+{
+throw new Exception();
+}
+else
+{
+System.out.println("you are not allowed to enter!! ");
+}
+}
+
+
+void useOfThrows_And_Finally()
+{
+try{
+useOfThrow(17);
+}
+catch(AirtmeticException e)
+{
+e.printStackTrace();
+}
+catch(IOException e)
+{
+e.printStackTrace();
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}
+}
+
+
+}
